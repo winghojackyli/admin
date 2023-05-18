@@ -13,7 +13,7 @@ export default function Home() {
       <Chart
         data={userData}
         title="User Analytics"
-        daatKey="Active User"
+        dataKey="Active User"
         grid
       />
       <div className="homeWidgets">

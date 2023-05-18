@@ -4,7 +4,6 @@ import {
   LineStyle,
   Timeline,
   TrendingUp,
-  PersonOutline,
   Storefront,
   AttachMoney,
   BarChart,
@@ -13,6 +12,7 @@ import {
   ChatBubbleOutline,
   WorkOutline,
   Report,
+  PermIdentity,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
@@ -23,12 +23,12 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <Link to="/">
+            <Link to="/" className="link">
+              <li className="sidebarListItem">
                 <LineStyle className="sidebarIcon" />
                 Home
-              </Link>
-            </li>
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
@@ -42,16 +42,18 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <Link to="/users">
-                <PersonOutline className="sidebarIcon" />
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <PermIdentity className="sidebarIcon" />
                 Users
-              </Link>
-            </li>
-            <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
-              Products
-            </li>
+              </li>
+            </Link>
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Products
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions
